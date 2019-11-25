@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/mIRecibidos"
+            android:icon="@drawable/ic_inbox_black_24dp"
+            android:title="Recibidos" />
+        <item
+            android:id="@+id/mIEnviados"
+            android:icon="@drawable/ic_unarchive_black_24dp"
+            android:title="Enviados" />
+        <item
+            android:id="@+id/mINoLeidos"
+            android:icon="@drawable/ic_mail_black_24dp"
+            android:title="No Leidos" />
+        <item
+            android:id="@+id/mIEnviar"
+            android:icon="@drawable/ic_send_black_24dp"
+            android:title="Enviar" />
+    </group>
+    <item android:title="Otras opciones">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/mISpam"
+                    android:icon="@drawable/ic_block_black_24dp"
+                    android:title="Spam" />
+                <item
+                    android:id="@+id/mIPapelera"
+                    android:icon="@drawable/ic_delete_sweep_black_24dp"
+                    android:title="Papelera" />
+            </group>
+        </menu>
+    </item>
+</menu>
