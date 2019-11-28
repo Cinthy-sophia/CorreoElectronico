@@ -1,11 +1,16 @@
 package com.cinthyasophia.correoelectronico;
 
+import com.cinthyasophia.correoelectronico.Util.Lib;
+
+import java.io.Serializable;
 import java.util.GregorianCalendar;
 
-public class Contacto {
+public class Contacto implements Serializable {
+    private Lib lib;
     private int id;
     private String nombre;
-    private String apellido;
+    private String apellido1;
+    private String apellido2;
     private GregorianCalendar fechaNac;
     private int foto;
     private String email;
@@ -13,18 +18,21 @@ public class Contacto {
     private String telefono2;
     private String dirección;
 
-    public Contacto(int id, String nombre, String apellido, GregorianCalendar fechaNac, int foto, String email, String telefono1, String telefono2, String dirección) {
-
+    public Contacto(int id, String nombre, String apellido1, String apellido2, String fechaNac, int foto, String email, String telefono1, String telefono2, String dirección) {
+        lib = new Lib();
         this.id = id;
         this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNac = fechaNac;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.fechaNac = lib.getFecha(fechaNac);
         this.foto = foto;
         this.email = email;
         this.telefono1 = telefono1;
         this.telefono2 = telefono2;
         this.dirección = dirección;
     }
+
+
 
     public int getId() {
         return id;
@@ -34,12 +42,16 @@ public class Contacto {
         return nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellido1() {
+        return apellido1;
     }
 
-    public GregorianCalendar getFechaNac() {
-        return fechaNac;
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public String getFechaNac() {
+        return lib.getFecha(fechaNac);
     }
 
     public int getFoto() {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CorreoElectronico</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
 </resources>
